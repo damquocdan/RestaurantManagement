@@ -22,7 +22,19 @@ namespace RestaurantManagement.Areas.AdminManagement.Controllers
         // GET: AdminManagement/Menus
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Menus.ToListAsync());
+            var menuItems = _context.Menus.ToList();
+
+            // Tính tổng giá theo từng Name
+            var groupedData = menuItems
+                .GroupBy(m => m.Name)
+                .Select(g => new
+                {
+                    Name = g.Key,
+                    TotalPrice = g.Sum(m => m.Price)
+                }).ToList();
+
+            ViewBag.GroupedData = groupedData; // Truyền dữ liệu vào View
+            return View(menuItems);
         }
 
         // GET: AdminManagement/Menus/Details/5
@@ -46,6 +58,7 @@ namespace RestaurantManagement.Areas.AdminManagement.Controllers
         // GET: AdminManagement/Menus/Create
         public IActionResult Create()
         {
+            ViewBag.MenuItems = _context.MenuItems.ToList();
             return View();
         }
 

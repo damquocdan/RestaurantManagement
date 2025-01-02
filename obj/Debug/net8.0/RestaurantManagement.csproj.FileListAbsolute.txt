@@ -267,3 +267,4 @@ E:\DATN\RestaurantManagement\RestaurantManagement\bin\Debug\net8.0\runtimes\win\
 E:\DATN\RestaurantManagement\RestaurantManagement\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 E:\DATN\RestaurantManagement\RestaurantManagement\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 E:\DATN\RestaurantManagement\RestaurantManagement\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+E:\DATN\RestaurantManagement\RestaurantManagement\obj\Debug\net8.0\RestaurantManagement.sourcelink.json

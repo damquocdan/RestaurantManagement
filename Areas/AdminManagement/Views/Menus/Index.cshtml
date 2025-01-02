@@ -46,3 +46,21 @@
 }
     </tbody>
 </table>
+<h2>Total Price by Name</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var group in ViewBag.GroupedData)
+        {
+            <tr>
+                <td>@group.Name</td>
+                <td>@group.TotalPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>

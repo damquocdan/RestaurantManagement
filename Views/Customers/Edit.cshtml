@@ -1,0 +1,175 @@
+﻿@model RestaurantManagement.Models.Customer
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* General Body Styling */
+    body {
+        background-color: #f7f7f7; /* Soft background for better contrast */
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Page Wrapper */
+    .edit-page {
+        width: 80%;
+        margin: 30px auto;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Title and Subtitle */
+    .page-title {
+        color: #5f3812; /* Dark brown for the main title */
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .customer-subtitle {
+        color: #cea377; /* Light brown for subtitle */
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Grid Layout for Form */
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Two columns, label in first column, input in second column */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .form-group label {
+        font-size: 16px;
+        color: #5f3812; /* Dark brown label color */
+    }
+
+    .form-group input {
+        background-color: #f6c728; /* Yellow background for input */
+        border: 1px solid #cea377; /* Light brown border */
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #d84f2b; /* Orange focus border */
+        }
+
+    .text-danger {
+        color: #d84f2b; /* Orange color for validation messages */
+    }
+
+    /* Submit Button */
+    .btn-save {
+        background-color: #d84f2b; /* Orange background for the save button */
+        color: white;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+        .btn-save:hover {
+            background-color: #e03a2d;
+        }
+
+    /* Back to List Button */
+    .btn-back {
+        background-color: #cea377; /* Light brown */
+        color: #5f3812; /* Dark brown text color */
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+        .btn-back:hover {
+            background-color: #f6c728; /* Yellow on hover */
+            color: white;
+        }
+
+</style>
+
+<div class="edit-page">
+    <h1 class="page-title">Sửa thông tin</h1>
+
+    <hr />
+
+    <div class="row" style="justify-content:center;">
+        <div class="col-md-8">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- Hidden field for CustomerId -->
+                <input type="hidden" asp-for="CustomerId" />
+
+                <!-- Form Fields with Grid Layout -->
+                <div class="form-group form-row">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-row">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-row">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-row">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-row">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-row">
+                    <label asp-for="CreatedAt" class="control-label"></label>
+                    <input asp-for="CreatedAt" class="form-control" />
+                    <span asp-validation-for="CreatedAt" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-row">
+                    <label asp-for="UpdatedAt" class="control-label"></label>
+                    <input asp-for="UpdatedAt" class="form-control" />
+                    <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Lưu" class="btn btn-save"  />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a asp-action="Index" >Quay lại</a>
+    </div>
+</div>

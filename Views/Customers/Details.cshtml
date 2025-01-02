@@ -1,0 +1,141 @@
+﻿@model RestaurantManagement.Models.Customer
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    /* General Body Styling */
+
+    /* Details Box Styling */
+    .details-box {
+        width: 700px;
+        margin: auto;
+        margin-top: 50px;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border: 1px solid #f6c728; /* Yellow border for restaurant theme */
+    }
+
+    /* Details Title Styling */
+    .details-title {
+        font-size: 36px;
+        color: #5f3812; /* Dark brown color */
+        margin-bottom: 20px;
+        font-family: 'Cursive', sans-serif;
+    }
+
+    /* Customer Info Styling */
+    .customer-info {
+        margin-top: 20px;
+    }
+
+    /* Row Layout for Customer Information */
+    dl.row dt {
+        font-weight: bold;
+        color: #5f3812; /* Dark brown for field labels */
+    }
+
+    dl.row dd {
+        color: #cea377; /* Light brown for the values */
+    }
+
+    /* Action Buttons Styling */
+    .action-buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Edit Button Styling */
+    .btn-edit {
+        background-color: #d84f2b; /* Orange background for edit */
+        border: none;
+        padding: 12px 20px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+        .btn-edit:hover {
+            background-color: #e03a2d;
+        }
+
+    /* Back Button Styling */
+    .btn-back {
+        background-color: #cea377; /* Light brown background for back */
+        color: #5f3812;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+        .btn-back:hover {
+            background-color: #f6c728; /* Yellow background on hover */
+            color: white;
+        }
+
+</style>
+<div class="details-box">
+    <h1 class="details-title">Chi tiết người dùng</h1>
+
+    <div class="customer-info">
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.CreatedAt)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.UpdatedAt)
+            </dd>
+        </dl>
+    </div>
+
+    <div class="action-buttons">
+        <a asp-action="Edit" asp-route-id="@Model?.CustomerId" class="btn btn-edit">Sửa</a>
+        <a onclick="window.history.back();" class="btn btn-back">Quay lại</a>
+    </div>
+</div>

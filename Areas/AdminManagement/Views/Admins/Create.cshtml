@@ -1,0 +1,106 @@
+﻿@model RestaurantManagement.Models.Admin
+
+@{
+    ViewData["Title"] = "Tạo Mới Quản Trị Viên";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+<style>
+    h1, h4 {
+        color: #5f3812;
+        font-size: 2rem;
+    }
+
+    label {
+        color: #5f3812;
+        font-weight: bold;
+    }
+
+    input.form-control {
+        border: 1px solid #cea377;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    input[type="submit"] {
+        background-color: #d84f2b;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 4px;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #5f3812;
+        }
+
+    a {
+        color: #5f3812;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: #d84f2b;
+            text-decoration: underline;
+        }
+
+    .text-danger {
+        color: #d84f2b;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    hr {
+        border-top: 2px solid #5f3812;
+    }
+</style>
+<h1>Tạo Mới Quản Trị Viên</h1>
+
+<h4>Thông Tin Quản Trị Viên</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Tên Quản Trị Viên</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Mật Khẩu</label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label">Số Điện Thoại</label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tạo Mới" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Quay lại danh sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

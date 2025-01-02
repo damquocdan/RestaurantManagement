@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quán Ăn Ngon - Giới Thiệu</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        
+    </style>
+</head>
+<body>
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h2>Bàn Trống</h2>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var table in ViewBag.AvailableTables)
+        {
+            <div class="col-md-3 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Bàn số: @table.TableNumber</h5>
+                        <p class="card-text">Sức chứa: @table.SeatingCapacity người</p>
+                        <button class="btn btn-primary">Đặt Bàn</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image:url(~/wwwroot/images/quanan.jpg);">
+        <h1>Chào Mừng Đến Với Quán Ăn Ngon</h1>
+        <p>Hương vị tuyệt vời, không gian thoải mái, dịch vụ hoàn hảo</p>
+        
+    </section>
+
+    <!-- Giới thiệu về Quán -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="section-title">Về Quán Ăn Ngon</h2>
+                <p>Quán Ăn Ngon đã trở thành một địa điểm ưa thích của nhiều thực khách yêu thích ẩm thực truyền thống Việt Nam. Với đội ngũ đầu bếp tài ba và không gian thoải mái, chúng tôi cam kết mang đến cho bạn những bữa ăn ngon miệng và một trải nghiệm không thể quên.</p>
+                <p>Chúng tôi sử dụng nguyên liệu tươi ngon, được chọn lọc kỹ càng và chế biến với tình yêu thương, nhằm mang đến món ăn chất lượng cao nhất cho khách hàng. Dù là món ăn sáng, trưa hay tối, Quán Ăn Ngon luôn là sự lựa chọn tuyệt vời cho bạn và gia đình.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="~/images/quanan1.jpg" alt="Quán Ăn Ngon" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h2 class="section-title text-center">Thực Đơn Của Quán</h2>
+        <div class="row">
+            @foreach (var item in ViewBag.MenuItems)
+            {
+                <div class="col-md-4 menu-item">
+                    <img src="@item.Description" alt="@item.Name" class="img-fluid" width="100%">
+                    <h3>@item.Name</h3>
+                    <p>Cơm tấm với sườn nướng thơm lừng, ăn kèm với dưa leo, đồ chua và nước mắm đặc biệt.</p>
+                    <p><strong>Giá: @item.Price VND</strong></p>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h2 class="section-title text-center">Dịch Vụ Của Quán</h2>
+        <div class="row">
+            <div class="col-md-4 service-item">
+                <img src="~/images/banhkem.jpg" alt="Bánh kem" class="img-fluid">
+                <h3>Tiệc Sinh Nhật</h3>
+                <p>Quán Ăn Ngon cung cấp dịch vụ tổ chức tiệc sinh nhật với thực đơn phong phú và không gian ấm cúng.</p>
+            </div>
+            <div class="col-md-4 service-item">
+                <img src="~/images/guimon.jpg" alt="Gửi món" class="img-fluid">
+                <h3>Giao Hàng Tận Nơi</h3>
+                <p>Chúng tôi cung cấp dịch vụ giao hàng tận nơi, giúp bạn thưởng thức món ăn ngay tại nhà.</p>
+            </div>
+            <div class="col-md-4 service-item">
+                <img src="~/images/party.jpg" alt="Tiệc ngoài trời" class="img-fluid">
+                <h3>Tiệc Ngoài Trời</h3>
+                <p>Chúng tôi tổ chức các bữa tiệc ngoài trời với không gian rộng rãi và thực đơn đa dạng, phù hợp với mọi nhu cầu.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h2 class="section-title text-center">Khách Hàng Nói Gì</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="testimonial">
+                    <h5>Nguyễn Thị Lan</h5>
+                    <p>"Món ăn ngon, phục vụ tận tình, không gian thoải mái. Tôi chắc chắn sẽ quay lại nhiều lần nữa!"</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="testimonial">
+                    <h5>Trần Minh Tuấn</h5>
+                    <p>"Đồ ăn luôn tươi ngon, quán luôn đông khách. Tôi rất hài lòng về dịch vụ giao hàng tận nơi của quán."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Liên Hệ -->
+    <div class="container mt-5">
+        <h2 class="section-title text-center">Liên Hệ Với Chúng Tôi</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Địa Chỉ</h4>
+                <p>123 Đường 1, Quận 2, TP. Hồ Chí Minh</p>
+                <h4>Số Điện Thoại</h4>
+                <p>(+84) 123 456 789</p>
+                <h4>Email</h4>
+                <p>contact@quanngon.com</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Gửi Thông Điệp</h4>
+                <form>
+                    <input type="text" class="form-control" placeholder="Tên của bạn" required><br>
+                    <input type="email" class="form-control" placeholder="Email của bạn" required><br>
+                    <textarea class="form-control" placeholder="Tin nhắn của bạn" rows="4" required></textarea><br>
+                    <button type="submit" class="btn btn-primary">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

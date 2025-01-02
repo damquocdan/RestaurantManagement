@@ -1,0 +1,112 @@
+﻿@model RestaurantManagement.Models.Reservation
+
+@{
+    ViewData["Title"] = "Tạo Mới";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Tạo Mới Đặt Bàn</h1>
+
+<h4>Thông Tin Đặt Bàn</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label">Khách Hàng</label>
+                <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TableId" class="control-label">Bàn</label>
+                <select asp-for="TableId" class="form-control" asp-items="ViewBag.TableId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReservationDate" class="control-label">Ngày Đặt</label>
+                <input asp-for="ReservationDate" class="form-control" />
+                <span asp-validation-for="ReservationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label">Trạng Thái</label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tạo Mới" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+    <style>
+        body {
+            background-color: #f6c728;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #5f3812;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        h4 {
+            color: #5f3812;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .form-group label {
+            color: #5f3812;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #cea377;
+        }
+
+        .btn-primary {
+            background-color: #d84f2b;
+            color: white;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #5f3812;
+            }
+
+        .btn-secondary {
+            background-color: #cea377;
+            color: #5f3812;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+            .btn-secondary:hover {
+                background-color: #d84f2b;
+                color: white;
+            }
+
+        .text-danger {
+            color: #d84f2b;
+        }
+    </style>

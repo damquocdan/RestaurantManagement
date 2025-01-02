@@ -1,0 +1,153 @@
+﻿@model IEnumerable<RestaurantManagement.Models.MenuItem>
+
+@{
+    ViewData["Title"] = "Danh Sách Món";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Danh Sách Món</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Tạo Mới</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.IsAvailable)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th class="text-center">
+                Hành động
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="text-center">
+                    <img src="@item.Description" width="100px" height="100px" />
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td class="text-center">
+                    @if (item.IsAvailable.HasValue && item.IsAvailable.Value)
+                    {
+                        <span class="text-success">Còn món</span>
+                    }
+                    else
+                    {
+                        <span class="text-danger">Hết món</span>
+                    }
+                </td>
+
+
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.UpdatedAt)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td class="text-center">
+                    <a asp-action="Edit" asp-route-id="@item.ItemId" class="btn btn-warning btn-sm">Sửa</a>
+                    <a asp-action="Details" asp-route-id="@item.ItemId" class="btn btn-info btn-sm">Chi tiết</a>
+                    <a asp-action="Delete" asp-route-id="@item.ItemId" class="btn btn-danger btn-sm">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+    <style>
+        body {
+            background-color: #f6c728;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #5f3812;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn-success {
+            background-color: #5f3812;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+            .btn-success:hover {
+                background-color: #d84f2b;
+            }
+
+        .btn-warning {
+            background-color: #cea377;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .btn-info {
+            background-color: #cea377;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .btn-danger {
+            background-color: #d84f2b;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .btn-sm {
+            font-size: 14px;
+        }
+
+        .table-bordered {
+            border: 1px solid #5f3812;
+            background-color: #fff;
+        }
+
+        th {
+            background-color: #5f3812;
+            color: #fff;
+            text-align: center;
+            padding: 12px;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        img {
+            border-radius: 5px;
+        }
+    </style>

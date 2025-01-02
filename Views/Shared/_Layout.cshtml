@@ -1,0 +1,176 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RestaurantManagement</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RestaurantManagement.styles.css" asp-append-version="true" />
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: #5f3812; /* Dark brown for a warm, restaurant-like feel */
+            border-bottom: 2px solid #cea377; /* Light beige border */
+        }
+
+        /* Navbar Brand */
+        .navbar-brand {
+            font-size: 1.8rem;
+            color: #f6c728; /* Golden yellow for a vibrant restaurant vibe */
+            font-family: 'Lobster', cursive; /* Elegant font for restaurant branding */
+        }
+
+        /* Navbar Links */
+        .navbar-nav .nav-item .nav-link {
+            color: #fff; /* White text for contrast */
+            font-size: 1.1rem;
+            padding: 10px 15px;
+        }
+
+            .navbar-nav .nav-item .nav-link:hover {
+                background-color: #cea377; /* Light beige on hover */
+                color: #5f3812; /* Dark brown text on hover */
+                border-radius: 5px;
+            }
+
+            /* Active Link Styling */
+            .navbar-nav .nav-item .nav-link.active {
+                background-color: #d84f2b; /* Orange-red color for active links */
+                color: #fff;
+            }
+
+        /* Toggle button */
+        .navbar-toggler-icon {
+            background-color: #f6c728; /* Gold toggle icon */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #5f3812; /* Dark brown footer */
+            color: #fff;
+            padding: 20px 0;
+        }
+
+            footer a {
+                color: #f6c728; /* Golden yellow for footer links */
+            }
+
+                footer a:hover {
+                    color: #d84f2b; /* Orange-red on hover */
+                }
+
+        /* Page background */
+        body {
+            background-color: #fef7e1; /* Light beige background for a warm, restaurant-friendly feel */
+        }
+
+        /* Custom Button Style */
+        .btn-custom {
+            background-color: #d84f2b; /* Orange-red button */
+            color: white;
+            border: none;
+        }
+
+            .btn-custom:hover {
+                background-color: #f6c728; /* Gold on hover */
+                color: #5f3812; /* Dark brown text on hover */
+            }
+
+        /* Section Title */
+        h1, h2, h3 {
+            color: #5f3812; /* Dark brown for headings */
+            font-family: 'Lobster', cursive;
+        }
+
+        /* Container Styling */
+        .container {
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo.png" alt="Bakery Logo" style="height: 80px; margin-right: 10px;">
+                    BEP ME IN
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Tables" asp-action="Index">Đặt bàn</a>
+                        </li>
+                        
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Nhập cần tìm" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Tìm kiếm</button>
+                    </form>
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        @if (Context.Session.GetString("CustomerLogin") != null)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tài khoản
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Tables" asp-action="Mytables" asp-route-customerId="@Context.Session.GetInt32("CustomerId")">Bàn đặt của tôi</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Customers" asp-action="Details" asp-route-customerId="@Context.Session.GetInt32("CustomerId")">Thông tin cá nhân</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="@Url.Action("Logout", "LoginC")">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tài khoản
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" asp-controller="LoginC" asp-action="Index">Đăng nhập</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Customers" asp-action="Create">Đăng ký</a></li>
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

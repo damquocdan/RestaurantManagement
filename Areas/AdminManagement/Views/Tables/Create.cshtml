@@ -1,0 +1,114 @@
+﻿@model RestaurantManagement.Models.Table
+
+@{
+    ViewData["Title"] = "Tạo Mới Bàn";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Tạo Mới Bàn</h1>
+
+<h4>Thông Tin Bàn</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TableNumber" class="control-label">Số Bàn</label>
+                <input asp-for="TableNumber" class="form-control" />
+                <span asp-validation-for="TableNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeatingCapacity" class="control-label">Sức Chứa</label>
+                <input asp-for="SeatingCapacity" class="form-control" />
+                <span asp-validation-for="SeatingCapacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tạo Mới" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Trở Lại Danh Sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+    <style>
+        body {
+            background-color: #f6c728;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #5f3812;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        h4 {
+            color: #5f3812;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #5f3812;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #cea377;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+            .form-control:focus {
+                border-color: #d84f2b;
+                box-shadow: 0 0 5px rgba(216, 79, 43, 0.5);
+            }
+
+        .btn {
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: #d84f2b;
+            color: white;
+        }
+
+            .btn-primary:hover {
+                background-color: #5f3812;
+            }
+
+        .btn-secondary {
+            background-color: #cea377;
+            color: #5f3812;
+        }
+
+            .btn-secondary:hover {
+                background-color: #d84f2b;
+                color: white;
+            }
+
+        .text-danger {
+            color: #d84f2b;
+        }
+    </style>

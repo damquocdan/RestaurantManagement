@@ -1,0 +1,110 @@
+﻿@model RestaurantManagement.Models.LoginC
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger mt-3">
+        <ul>
+            @foreach (var modelState in ViewData.ModelState.Values)
+            {
+                foreach (var error in modelState.Errors)
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            }
+        </ul>
+    </div>
+}
+
+<style>
+    .login-box {
+        width: 400px;
+        margin: auto;
+        margin-top: 100px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        border-radius: 12px;
+        background-color: #fff;
+        text-align: center;
+        border: 1px solid #f6c728; /* Yellow border for the restaurant theme */
+    }
+
+    /* Title Styling */
+    .login-title {
+        font-weight: 700;
+        font-size: 28px;
+        color: #5f3812; /* Dark brown color for the title */
+        margin-bottom: 20px;
+        font-family: 'Cursive', sans-serif; /* Add a playful font style */
+    }
+
+    /* Custom Input Styling */
+    .custom-input {
+        border-radius: 8px;
+        margin-top: 10px;
+        height: 45px;
+        padding-left: 15px;
+        font-size: 16px;
+        background-color: #cea377; /* Light brown background */
+        border: 1px solid #d84f2b; /* Orange border */
+        color: #5f3812; /* Dark brown text */
+    }
+
+        /* Focused Input Field Styling */
+        .custom-input:focus {
+            border-color: #f6c728; /* Yellow border on focus */
+            box-shadow: 0 0 5px rgba(246, 199, 40, 0.5);
+        }
+
+    /* Submit Button Styling */
+    .btn-primary {
+        width: 100%;
+        border-radius: 8px;
+        background-color: #d84f2b; /* Orange background */
+        border: none;
+        padding: 12px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+        /* Hover Effect for Submit Button */
+        .btn-primary:hover {
+            background-color: #5f3812; /* Dark brown background on hover */
+        }
+
+    /* Alert Styling */
+    .alert {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+        .alert ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .alert li {
+            margin-bottom: 5px;
+        }
+</style>
+
+<div class="login-box">
+    <div class="login-title">Khách hàng đăng nhập</div>
+    <form asp-action="Index" method="post">
+        <!-- Email input -->
+        <input asp-for="Email" type="email" class="custom-input form-control form-control-lg"
+               placeholder="Email" />
+
+        <!-- Password input -->
+        <input asp-for="Password" type="password" class="custom-input form-control form-control-lg"
+               placeholder="Mật khẩu" required />
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+    </form>
+</div>

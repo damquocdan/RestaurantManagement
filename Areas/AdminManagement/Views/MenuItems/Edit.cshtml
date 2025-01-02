@@ -1,0 +1,134 @@
+﻿@model RestaurantManagement.Models.MenuItem
+
+@{
+    ViewData["Title"] = "Chỉnh Sửa Món";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Chỉnh Sửa Món</h1>
+
+<h4>Thông Tin Món</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ItemId" />
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Tên Món</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Mô Tả</label>
+                <input asp-for="Description" type="file" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Price" class="control-label">Giá</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label">Danh Mục</label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="IsAvailable" class="control-label">Trạng Thái</label>
+                <input asp-for="IsAvailable" class="form-control" />
+                <span asp-validation-for="IsAvailable" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label">Ngày Tạo</label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label">Ngày Cập Nhật</label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+</div>
+
+    <style>
+        body {
+            background-color: #f6c728;
+        }
+
+        h1, h4 {
+            color: #5f3812;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #5f3812;
+        }
+
+        .form-control {
+            border: 1px solid #cea377;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #5f3812;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+            .btn-primary:hover {
+                background-color: #d84f2b;
+            }
+
+        .btn-secondary {
+            background-color: #cea377;
+            color: white;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+
+            .btn-secondary:hover {
+                background-color: #d84f2b;
+            }
+
+        .text-danger {
+            color: #d84f2b;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border-top: 2px solid #5f3812;
+        }
+
+        .col-md-6 {
+            margin: 0 auto;
+        }
+
+        .form-group input[type="file"] {
+            padding: 5px;
+        }
+    </style>

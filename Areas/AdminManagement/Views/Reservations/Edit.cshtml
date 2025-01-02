@@ -1,0 +1,117 @@
+﻿@model RestaurantManagement.Models.Reservation
+
+@{
+    ViewData["Title"] = "Chỉnh Sửa Đặt Bàn";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Chỉnh Sửa Đặt Bàn</h1>
+
+<h4>Đặt Bàn</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ReservationId" />
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label">Khách Hàng</label>
+                <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TableId" class="control-label">Bàn</label>
+                <select asp-for="TableId" class="form-control" asp-items="ViewBag.TableId"></select>
+                <span asp-validation-for="TableId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReservationDate" class="control-label">Ngày Đặt</label>
+                <input asp-for="ReservationDate" class="form-control" />
+                <span asp-validation-for="ReservationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label">Trạng Thái</label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label">Ngày Tạo</label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label">Ngày Cập Nhật</label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+</div>
+
+
+    <style>
+        body {
+            background-color: #f6c728;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #5f3812;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        h4 {
+            color: #5f3812;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #5f3812;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #cea377;
+            padding: 8px;
+        }
+
+        .btn-primary {
+            background-color: #d84f2b;
+            color: white;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+            .btn-primary:hover {
+                background-color: #5f3812;
+            }
+
+        .btn-secondary {
+            background-color: #cea377;
+            color: #5f3812;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+            .btn-secondary:hover {
+                background-color: #d84f2b;
+                color: white;
+            }
+
+        .text-danger {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    </style>

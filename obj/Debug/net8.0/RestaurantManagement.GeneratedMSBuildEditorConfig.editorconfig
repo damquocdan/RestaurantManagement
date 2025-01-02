@@ -1,0 +1,439 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RestaurantManagement
+build_property.RootNamespace = RestaurantManagement
+build_property.ProjectDir = E:\DATN\RestaurantManagement\RestaurantManagement\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\DATN\RestaurantManagement\RestaurantManagement
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Admins/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEFkbWluc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Admins/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEFkbWluc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Admins/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEFkbWluc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Admins/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEFkbWluc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Admins/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEFkbWluc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXENhdGVnb3JpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXENhdGVnb3JpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXENhdGVnb3JpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXENhdGVnb3JpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXENhdGVnb3JpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Customers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEN1c3RvbWVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Customers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEN1c3RvbWVyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Customers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEN1c3RvbWVyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Customers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEN1c3RvbWVyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Customers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXEN1c3RvbWVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXExvZ2luXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/MenuItems/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVJdGVtc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/MenuItems/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVJdGVtc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/MenuItems/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVJdGVtc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/MenuItems/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVJdGVtc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/MenuItems/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVJdGVtc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Menus/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Menus/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Menus/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Menus/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Menus/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE1lbnVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Ods/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9kc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Ods/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9kc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Ods/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9kc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Ods/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9kc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Ods/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9kc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderDetails/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyRGV0YWlsc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderDetails/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyRGV0YWlsc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderDetails/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyRGV0YWlsc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderDetails/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyRGV0YWlsc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyRGV0YWlsc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderItems/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVySXRlbXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderItems/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVySXRlbXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderItems/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVySXRlbXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderItems/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVySXRlbXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrderItems/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVySXRlbXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrdersItems/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc0l0ZW1zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrdersItems/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc0l0ZW1zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrdersItems/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc0l0ZW1zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrdersItems/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc0l0ZW1zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/OrdersItems/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc0l0ZW1zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Orders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Orders/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Orders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Orders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXE9yZGVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Reservations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFJlc2VydmF0aW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Reservations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFJlc2VydmF0aW9uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Reservations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFJlc2VydmF0aW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Reservations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFJlc2VydmF0aW9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Reservations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFJlc2VydmF0aW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Shared/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFNoYXJlZFxBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Shared/_NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFNoYXJlZFxfTmF2QmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Shared/_Preloader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFNoYXJlZFxfUHJlbG9hZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Shared/_SideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFNoYXJlZFxfU2lkZUJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Tables/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFRhYmxlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Tables/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFRhYmxlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Tables/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFRhYmxlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Tables/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFRhYmxlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/Tables/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXFRhYmxlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Areas/AdminManagement/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5NYW5hZ2VtZW50XFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Customers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Customers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Customers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Customers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Customers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/LoginC/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5DXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/MenuItems/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/MenuItems/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/MenuItems/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/MenuItems/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/MenuItems/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Orders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Orders/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Orders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Orders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Reservations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Reservations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Reservations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Reservations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Reservations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Tables/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Tables/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Tables/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Tables/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Tables/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Tables/Mytables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXE15dGFibGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DATN/RestaurantManagement/RestaurantManagement/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-qeeoem54h0

@@ -1,0 +1,151 @@
+﻿@model IEnumerable<RestaurantManagement.Models.Order>
+
+@{
+    ViewData["Title"] = "Danh Sách Đơn Hàng";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Danh Sách Đơn Hàng</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Tạo Mới Đơn Hàng</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>Hành Động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDate)
+                </td>
+                <td>
+                    @if (item.Status == "Paid")
+                    {
+                        <span>Đã thanh toán</span>
+                    }
+                    else
+                    {
+                        <span>Chưa thanh toán</span>
+                    }
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.OrderId" class="btn btn-warning">Chỉnh Sửa</a> 
+                    <a asp-action="Details" asp-route-id="@item.OrderId" class="btn btn-info">Chi Tiết</a> 
+                    <a asp-action="Delete" asp-route-id="@item.OrderId" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+    <style>
+        body {
+            background-color: #f6c728;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #5f3812;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #cea377;
+        }
+
+        th {
+            background-color: #5f3812;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #cea377;
+        }
+
+        .btn {
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .btn-success {
+            background-color: #d84f2b;
+            color: white;
+        }
+
+            .btn-success:hover {
+                background-color: #5f3812;
+            }
+
+        .btn-warning {
+            background-color: #cea377;
+            color: white;
+        }
+
+            .btn-warning:hover {
+                background-color: #d84f2b;
+            }
+
+        .btn-info {
+            background-color: #5f3812;
+            color: white;
+        }
+
+            .btn-info:hover {
+                background-color: #cea377;
+            }
+
+        .btn-danger {
+            background-color: #d84f2b;
+            color: white;
+        }
+
+            .btn-danger:hover {
+                background-color: #5f3812;
+            }
+    </style>

@@ -1,0 +1,129 @@
+﻿@model IEnumerable<RestaurantManagement.Models.Reservation>
+
+@{
+    ViewData["Title"] = "Danh Sách Đặt Bàn";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Danh Sách Đặt Bàn</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tạo Mới</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReservationDate)
+            </th>
+            <th>
+                Số điện thoại
+            </th>
+            <th>
+                Ngày
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Table)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var status = ViewData["ReservationStatus"]?.ToString() ?? "Chưa đến";  // Fallback to "Chưa đến" if null
+
+            <tr id="reservation-@item.ReservationId">
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReservationDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Table.TableNumber)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+
+
+</table>
+
+    <style>
+        body {
+            background-color: #f6c728;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #5f3812;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .table th {
+            background-color: #d84f2b;
+            color: white;
+        }
+
+        .table td {
+            background-color: #cea377;
+        }
+
+        .btn {
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #d84f2b;
+            color: white;
+        }
+
+            .btn-primary:hover {
+                background-color: #5f3812;
+            }
+
+        .btn-warning {
+            background-color: #cea377;
+            color: white;
+        }
+
+            .btn-warning:hover {
+                background-color: #d84f2b;
+            }
+
+        .btn-info {
+            background-color: #5f3812;
+            color: white;
+        }
+
+            .btn-info:hover {
+                background-color: #d84f2b;
+            }
+
+        .btn-danger {
+            background-color: #d84f2b;
+            color: white;
+        }
+
+            .btn-danger:hover {
+                background-color: #5f3812;
+            }
+    </style>
+

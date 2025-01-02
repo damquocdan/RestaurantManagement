@@ -1,0 +1,114 @@
+﻿@model RestaurantManagement.Models.Order
+
+@{
+    ViewData["Title"] = "Tạo Đơn Hàng";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Tạo Đơn Hàng Mới</h1>
+
+<h4>Thông Tin Đơn Hàng</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label">Khách Hàng</label>
+                <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Status" class="control-label">Trạng Thái</label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TotalPrice" class="control-label">Tổng Tiền</label>
+                <input asp-for="TotalPrice" class="form-control" />
+                <span asp-validation-for="TotalPrice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Tạo" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Quay Lại Danh Sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+    <style>
+        body {
+            background-color: #f6c728;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #5f3812;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        h4 {
+            color: #5f3812;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #5f3812;
+        }
+
+        .btn {
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #d84f2b;
+            color: white;
+        }
+
+            .btn-primary:hover {
+                background-color: #5f3812;
+            }
+
+        .btn-secondary {
+            background-color: #cea377;
+            color: white;
+        }
+
+            .btn-secondary:hover {
+                background-color: #d84f2b;
+            }
+
+        .form-control {
+            border: 1px solid #cea377;
+            border-radius: 5px;
+        }
+
+            .form-control:focus {
+                border-color: #d84f2b;
+            }
+
+        .text-danger {
+            color: #d84f2b;
+        }
+    </style>

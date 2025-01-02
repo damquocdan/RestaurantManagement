@@ -1,0 +1,172 @@
+﻿@model RestaurantManagement.Models.Customer
+
+@{
+    ViewData["Title"] = "Chỉnh Sửa Khách Hàng";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Chỉnh Sửa Khách Hàng</h1>
+
+<h4>Thông Tin Khách Hàng</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CustomerId" />
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Tên Khách Hàng</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Mật Khẩu</label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label">Số Điện Thoại</label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address" class="control-label">Địa Chỉ</label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label">Ngày Tạo</label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label">Ngày Cập Nhật</label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Lưu Thay Đổi" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Trở Lại Danh Sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+    <style>
+        body {
+            background-color: #f6c728;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #5f3812;
+        }
+
+        h4 {
+            font-size: 1.8rem;
+            color: #5f3812;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #cea377;
+            color: #5f3812;
+            font-weight: bold;
+        }
+
+        td {
+            color: #5f3812;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 1rem;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: #d84f2b;
+            border-color: #d84f2b;
+            color: white;
+        }
+
+        .btn-warning {
+            background-color: #cea377;
+            border-color: #cea377;
+            color: white;
+        }
+
+        .btn-info {
+            background-color: #5f3812;
+            border-color: #5f3812;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #d84f2b;
+            border-color: #d84f2b;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .text-danger {
+            color: #d84f2b;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #5f3812;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>

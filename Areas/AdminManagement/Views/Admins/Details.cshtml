@@ -1,0 +1,129 @@
+﻿@model RestaurantManagement.Models.Admin
+
+@{
+    ViewData["Title"] = "Chi Tiết";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+<style>
+    body {
+        background-color: #f6c728;
+        font-family: Arial, sans-serif;
+    }
+
+    h1, h3 {
+        color: #5f3812;
+        font-size: 2rem;
+    }
+
+    h4 {
+        color: #5f3812;
+        font-size: 1.5rem;
+    }
+
+    dt {
+        font-weight: bold;
+        color: #5f3812;
+    }
+
+    dd {
+        font-size: 1rem;
+        color: #5f3812;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    a.btn {
+        padding: 10px 15px;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    a.btn-warning {
+        background-color: #cea377;
+        color: white;
+        text-decoration: none;
+    }
+
+        a.btn-warning:hover {
+            background-color: #5f3812;
+        }
+
+    a.btn-secondary {
+        background-color: #d84f2b;
+        color: white;
+        text-decoration: none;
+    }
+
+        a.btn-secondary:hover {
+            background-color: #5f3812;
+        }
+
+    dl.row {
+        margin-bottom: 20px;
+    }
+
+    hr {
+        border-top: 2px solid #5f3812;
+    }
+
+    .text-danger {
+        color: #d84f2b;
+    }
+
+    dt, dd {
+        font-size: 1.1rem;
+    }
+
+</style>
+<h1>Chi Tiết Quản Trị Viên</h1>
+
+<div>
+    <h4>Thông Tin Quản Trị Viên</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UpdatedAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UpdatedAt)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.AdminId" class="btn btn-warning">Chỉnh Sửa</a>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+</div>

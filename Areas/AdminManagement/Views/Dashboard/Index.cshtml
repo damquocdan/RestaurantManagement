@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Dashboard</h1>
+<p>Đây là nội dung trang chủ admin</p>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Tổng Số Đơn Hàng</div>
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["TotalOrders"]</h5>
+                <p class="card-text">Số lượng đơn hàng hiện tại trong hệ thống.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Tổng Số Khách Hàng</div>
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["TotalCustomers"]</h5>
+                <p class="card-text">Số lượng khách hàng đã đăng ký trong hệ thống.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-header">Tổng Số Nhân Viên</div>
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["TotalEmployees"]</h5>
+                <p class="card-text">Số lượng nhân viên trong hệ thống.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-danger mb-3">
+            <div class="card-header">Tổng Số Sản Phẩm</div>
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["TotalProducts"]</h5>
+                <p class="card-text">Số lượng sản phẩm có sẵn trong hệ thống.</p>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,30 @@
+﻿@model List<Table>
+
+<h2>Danh sách bàn đã đặt</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mã bàn</th>
+                <th>Tên số</th>
+                <th>Thời gian đặt</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var table in Model)
+            {
+                <tr>
+                    <td>@table.TableId</td>
+                    <td>@table.TableNumber</td>
+                    <td>@table.UpdatedAt</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Hiện tại bạn chưa đặt bàn nào.</p>
+}

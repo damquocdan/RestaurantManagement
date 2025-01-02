@@ -1,0 +1,143 @@
+﻿﻿﻿﻿@using Microsoft.AspNetCore.Http;
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+<aside class="main-sidebar sidebar-dark-primary elevation-4 position-fixed">
+    <!-- Brand Logo -->
+    <a href="/adminmanagement/dashboard" class="brand-link">
+        <img src="~/images/Logo.png" alt="Logo Hunre" width="75px">
+        <span class="brand-text font-weight-light ms-2">Quản lý</span>
+    </a>
+
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex position-fixed bottom-0">
+            <div class="image">
+                <img src="~/images/Logo.png" class="img-circle elevation-2" alt="Logo-Hunrre">
+            </div>
+            <div class="info">
+                @if (HttpContextAccessor.HttpContext.Session.GetString("AdminLogin") != null)
+                {
+                    <a href="#" class="d-block">@HttpContextAccessor.HttpContext.Session.GetString("AdminLogin")</a>
+                    <a asp-action="Logout" asp-controller="Login">Đăng xuất</a>
+                }
+                else
+                {
+                    <a href="#" class="d-block">Trang</a>
+                }
+            </div>
+        </div>
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex justify-content-center" style="width: 30px">
+                                <i class="fa-solid fa-user-tie fa-xl"></i>
+                            </div>
+                            <p class="ms-3">Tài khoản Admin <i class="right fas fa-angle-down"></i></p>
+                        </div>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item"><a href="/adminmanagement/admins" class="nav-link"><i class="fas fa-edit nav-icon"></i><p>Danh sách</p></a></li>
+                        <li class="nav-item"><a href="/adminmanagement/admins/create" class="nav-link"><i class="fas fa-plus-circle nav-icon"></i><p>Thêm</p></a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex justify-content-center" style="width: 30px">
+                                <i class="fa-solid fa-house-user fa-xl"></i>
+                            </div>
+                            <p class="ms-3">Quản lý khách hàng <i class="right fas fa-angle-down"></i></p>
+                        </div>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item"><a href="/adminmanagement/customers" class="nav-link"><i class="fas fa-edit nav-icon"></i><p>Danh sách</p></a></li>
+                        <li class="nav-item"><a href="/adminmanagement/customers/create" class="nav-link"><i class="fas fa-plus-circle nav-icon"></i><p>Thêm</p></a></li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex justify-content-center" style="width: 30px">
+                                <i class="fa-solid fa-list fa-xl"></i>
+                            </div>
+                            <p class="ms-3">Quản lý Thực đơn <i class="right fas fa-angle-down"></i></p>
+                        </div>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item"><a href="/adminmanagement/menuitems" class="nav-link"><i class="fas fa-plus-circle nav-icon"></i><p>Danh sách</p></a></li>
+                        <li class="nav-item"><a href="/adminmanagement/menuitems/create" class="nav-link"><i class="fas fa-edit nav-icon"></i><p>Thêm</p></a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex justify-content-center" style="width: 30px">
+                                <i class="fa-solid fa-list fa-xl"></i>
+                            </div>
+                            <p class="ms-3">Quản lý Bàn <i class="right fas fa-angle-down"></i></p>
+                        </div>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item"><a href="/adminmanagement/tables" class="nav-link"><i class="fas fa-plus-circle nav-icon"></i><p>Danh sách Bàn</p></a></li>
+                        <li class="nav-item"><a href="/adminmanagement/reservations" class="nav-link"><i class="fas fa-edit nav-icon"></i><p>Danh sách bàn đặt</p></a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/adminmanagement/orderscs" class="nav-link">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex justify-content-center" style="width: 30px">
+                                <i class="fa-solid fa-list fa-xl"></i>
+                            </div>
+                            <p class="ms-3">Quản lý hoá đơn</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>
+
+<style>
+    /* Sidebar background */
+    .main-sidebar {
+        background-color: #5f3812;
+    }
+
+    /* Sidebar Text */
+    .nav-link {
+        color: #cea377 !important;
+    }
+
+        .nav-link:hover {
+            color: #f6c728 !important;
+            background-color: #d84f2b !important;
+        }
+
+    /* Header text */
+    .brand-text {
+        color: #f6c728;
+    }
+
+    .user-panel .info a {
+        color: #cea377;
+    }
+
+    .sidebar-dark-primary .nav-treeview .nav-link {
+        color: #cea377;
+    }
+
+    /* Expand the sidebar icon */
+    .fa-angle-down {
+        color: #d84f2b;
+    }
+
+    .fa-xl {
+        color: #f6c728;
+    }
+
+</style>

@@ -1,0 +1,164 @@
+﻿@model IEnumerable<RestaurantManagement.Models.Customer>
+
+@{
+    ViewData["Title"] = "Danh Sách Khách Hàng";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+
+<h1>Danh Sách Khách Hàng</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tạo Mới</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedAt)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CustomerId" class="btn btn-warning">Chỉnh Sửa</a>
+                    <a asp-action="Details" asp-route-id="@item.CustomerId" class="btn btn-info">Chi Tiết</a>
+                    <a asp-action="Delete" asp-route-id="@item.CustomerId" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+    <style>
+        body {
+            background-color: #f6c728;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #5f3812;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #cea377;
+            color: #5f3812;
+            font-weight: bold;
+        }
+
+        td {
+            color: #5f3812;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 1rem;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: #d84f2b;
+            border-color: #d84f2b;
+            color: white;
+        }
+
+        .btn-warning {
+            background-color: #cea377;
+            border-color: #cea377;
+            color: white;
+        }
+
+        .btn-info {
+            background-color: #5f3812;
+            border-color: #5f3812;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #d84f2b;
+            border-color: #d84f2b;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .table tbody tr:hover {
+            background-color: #e3e3e3;
+        }
+
+        .text-danger {
+            color: #d84f2b;
+        }
+
+        .col-sm-2 {
+            font-weight: bold;
+            color: #5f3812;
+        }
+
+        .col-sm-10 {
+            color: #5f3812;
+        }
+    </style>
+

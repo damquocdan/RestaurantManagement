@@ -1,0 +1,124 @@
+﻿@model RestaurantManagement.Models.Customer
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* General Form Styling */
+.restaurant-form {
+    background-color: #f6c728; /* Yellow background */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-form .form-group {
+    margin-bottom: 15px;
+}
+
+.restaurant-form label {
+    color: #5f3812; /* Dark brown color */
+    font-weight: bold;
+}
+
+.restaurant-form .form-control {
+    background-color: #cea377; /* Light brown background */
+    border: 1px solid #d84f2b; /* Orange border */
+    color: #5f3812; /* Dark brown text */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.restaurant-form .form-control:focus {
+    border-color: #f6c728; /* Yellow border on focus */
+    box-shadow: 0 0 5px rgba(246, 199, 40, 0.5);
+}
+
+.restaurant-form .btn-submit {
+    background-color: #d84f2b; /* Orange background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.restaurant-form .btn-submit:hover {
+    background-color: #5f3812; /* Dark brown on hover */
+}
+
+.restaurant-form .btn-back {
+    color: #5f3812;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #cea377; /* Light brown background for the back button */
+    font-size: 16px;
+}
+
+.restaurant-form .btn-back:hover {
+    background-color: #d84f2b; /* Orange color on hover */
+    color: white;
+}
+
+/* Validation messages */
+.text-danger {
+    color: #d84f2b; /* Orange color for validation errors */
+}
+
+/* Responsive design for the form */
+
+
+</style>
+<h1 class="text-center">Đăng ký tài khoản</h>
+
+<hr /> 
+<div class="row" style="justify-content:center;">
+    <div class="col-md-6">
+        <form asp-action="Create" class="restaurant-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Đăng ký" class="btn btn-submit" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a onclick="window.history.back()" class="btn btn-back">Quay lại</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

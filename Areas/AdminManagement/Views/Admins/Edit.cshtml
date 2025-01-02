@@ -1,0 +1,141 @@
+﻿@model RestaurantManagement.Models.Admin
+
+@{
+    ViewData["Title"] = "Chỉnh Sửa";
+    Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
+}
+<style>
+    body {
+        background-color: #f6c728;
+        font-family: Arial, sans-serif;
+    }
+
+    h1, h4 {
+        color: #5f3812;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-weight: bold;
+        color: #5f3812;
+    }
+
+    input.form-control {
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    input[type="submit"] {
+        background-color: #cea377;
+        color: white;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #5f3812;
+        }
+
+    a.btn {
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    a.btn-secondary {
+        background-color: #d84f2b;
+        color: white;
+        text-decoration: none;
+    }
+
+        a.btn-secondary:hover {
+            background-color: #5f3812;
+        }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .text-danger {
+        color: #d84f2b;
+    }
+
+    hr {
+        border-top: 2px solid #5f3812;
+    }
+
+</style>
+
+<h1>Chỉnh Sửa Quản Trị Viên</h1>
+
+<h4>Thông Tin Quản Trị Viên</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AdminId" />
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Tên Quản Trị Viên</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Mật Khẩu</label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label">Số Điện Thoại</label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label">Ngày Tạo</label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label">Ngày Cập Nhật</label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Lưu Thay Đổi" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

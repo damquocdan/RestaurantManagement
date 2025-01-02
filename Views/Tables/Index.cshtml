@@ -1,0 +1,136 @@
+﻿@model IEnumerable<RestaurantManagement.Models.Table>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .table-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 70px;
+        justify-content: center;
+        padding: 20px;
+        position: relative;
+    }
+
+    .table {
+        width: 300px;
+        height: 300px;
+        background-color: #f8f9fa;
+        border: 2px solid #6c757d;
+        border-radius: 50%; /* Tạo hình tròn cho bàn */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .table-content {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        z-index: 2; /* Đảm bảo nội dung của bàn luôn ở trên ghế */
+    }
+
+    .reserve-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+
+        .reserve-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+    .table-content p {
+        margin: 5px 0;
+    }
+
+    .table-available {
+        background-color: aqua; /* Màu xanh nhạt */
+    }
+
+    .table-occupied {
+        background-color: red; /* Màu đỏ nhạt */
+    }
+
+    /* Thêm ghế xung quanh bàn */
+    .table .chair {
+        content: "";
+        position: absolute;
+        background-color: #5f3812;
+        border-radius: 50%;
+        z-index: 1; /* Đặt ghế dưới lớp bàn và nội dung */
+    }
+
+        .table .chair.top,
+        .table .chair.bottom,
+        .table .chair.left,
+        .table .chair.right {
+            width: 60px; /* Lớn hơn ghế trước */
+            height: 60px;
+        }
+
+        /* Vị trí ghế */
+        .table .chair.top {
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .table .chair.left {
+            top: 50%;
+            left: -35px;
+            transform: translateY(-50%);
+        }
+
+        .table .chair.right {
+            top: 50%;
+            right: -35px;
+            transform: translateY(-50%);
+        }
+
+        .table .chair.bottom {
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+</style>
+<h1>Danh sách bàn của quán ăn</h1>
+<div class="table-container">
+    @foreach (var item in Model)
+    {
+        var rowClass = item.IsAvailable == true ? "table-available" : "table-occupied";
+        <div class="table @rowClass">
+            <!-- Ghế xung quanh bàn -->
+            <div class="chair top"></div>
+            <div class="chair left"></div>
+            <div class="chair right"></div>
+            <div class="chair bottom"></div>
+
+            <div class="table-content">
+                <p><strong>Số bàn:</strong> @Html.DisplayFor(modelItem => item.TableNumber)</p>
+                <p><strong>Sức chứa:</strong> @Html.DisplayFor(modelItem => item.SeatingCapacity)</p>
+                <p>
+                    <strong>Trạng thái:</strong>
+                    @(item.IsAvailable ?? false ? "Trống" : "Đã có người đặt")
+                </p>
+                <p><strong>Ngày cập nhật:</strong></p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.UpdatedAt)
+                </p>
+                <a class="reserve-button" asp-controller="Reservations" asp-action="Add" asp-route-id="@item.TableId" asp-route-customerId="@Context.Session.GetInt32("CustomerId")">Đặt bàn</a>
+            </div>
+        </div>
+    }
+</div>

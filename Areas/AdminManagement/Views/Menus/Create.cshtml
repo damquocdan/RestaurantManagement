@@ -1,51 +1,146 @@
 ﻿@model RestaurantManagement.Models.Menu
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Gọi Món";
     Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
 }
 
-<h1>Create</h1>
+<style>
+    /* Tiêu đề chính */
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #3d3d3d; /* Neutral dark color for better readability */
+        font-weight: bold;
+    }
 
-<h4>Menu</h4>
+    /* Form nhóm */
+    .form-group label {
+        color: #4a4a4a; /* Softer gray for labels */
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select {
+        border: 1px solid #a5a5a5;
+        border-radius: 5px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #f6c728; /* Highlight border */
+            box-shadow: 0 0 5px rgba(246, 199, 40, 0.5); /* Subtle glow effect */
+        }
+
+    /* Nút thêm */
+    .btn-primary {
+        background-color: #f6c728; /* Bright accent color */
+        border-color: #f6c728;
+        color: #ffffff; /* White text */
+    }
+
+        .btn-primary:hover {
+            background-color: #d1a620; /* Slightly darker yellow on hover */
+            border-color: #d1a620;
+        }
+
+    /* Liên kết quay lại */
+    a {
+        color: #d84f2b; /* Red-orange for call-to-action links */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        a:hover {
+            color: #bf3f22; /* Darker red-orange on hover */
+            text-decoration: underline;
+        }
+
+    /* Bố cục */
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .col-md-4 {
+        background-color: #fdf3d8; /* Light cream background */
+        border: 1px solid #e2c896;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    }
+
+    .text-danger {
+        color: #d84f2b; /* Keep error messages red for visibility */
+    }
+</style>
+
+
+<h1>GỌI MÓN</h1>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <label asp-for="Name" class="control-label">Tên Bàn</label>
+                <select asp-for="Name" class="form-control">
+                    <option value="">-- Chọn Bàn --</option>
+                    @foreach (var item in ViewBag.Tables as List<RestaurantManagement.Models.Table>)
+                    {
+                        <option value="@item.TableNumber">@item.TableNumber</option>
+                    }
+                </select>
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <select asp-for="Description" class="form-control">
-                    <option value="">-- Select a Menu Item --</option>
+                <label asp-for="Description" class="control-label">Món Ăn</label>
+                <select asp-for="Description" class="form-control" id="MenuSelect" onchange="updatePrice()">
+                    <option value="">-- Chọn Món Ăn --</option>
                     @foreach (var item in ViewBag.MenuItems as List<RestaurantManagement.Models.MenuItem>)
                     {
-                        <option value="@item.Name">@item.Name - @item.Price</option>
+                        <option value="@item.Name" data-price="@item.Price">@item.Name</option>
                     }
                 </select>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="Price" class="control-label">Giá Tiền</label>
+                <input asp-for="Price" class="form-control" id="PriceInput" readonly />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Thêm" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Quay lại</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+<script>
+    function updatePrice() {
+        // Lấy phần tử select
+        var menuSelect = document.getElementById("MenuSelect");
+
+        // Lấy giá trị từ thuộc tính data-price của option được chọn
+        var selectedOption = menuSelect.options[menuSelect.selectedIndex];
+        var price = selectedOption.getAttribute("data-price");
+
+        // Cập nhật giá trị trong input Price
+        document.getElementById("PriceInput").value = price || "";
+    }
+</script>

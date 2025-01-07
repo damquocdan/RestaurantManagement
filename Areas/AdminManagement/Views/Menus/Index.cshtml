@@ -4,138 +4,110 @@
     ViewData["Title"] = "Quản lý Menu";
     Layout = "~/Areas/AdminManagement/Views/Shared/Admin.cshtml";
 }
-
 <style>
-    /* Tiêu đề chính */
-   /* Định dạng nút */
-.btn {
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
+    /* Sử dụng Flexbox để trải dài các phần tử ngang */
+    .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-.btn-primary {
-    background-color: #5f3812;
-    border-color: #5f3812;
-    color: #fff;
-}
+    .justify-content-between {
+        justify-content: space-between;
+    }
 
-.btn-primary:hover {
-    background-color: #76461a;
-    border-color: #76461a;
-}
+    .align-items-center {
+        align-items: center;
+    }
 
-.btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    color: #fff;
-}
+    /* Điều chỉnh khoảng cách và căn chỉnh */
+    .mt-2 {
+        margin-top: 1rem;
+    }
 
-.btn-danger:hover {
-    background-color: #c82333;
-    border-color: #bd2130;
-}
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
 
-.btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-    color: #fff;
-}
+    .ml-2 {
+        margin-left: 0.5rem;
+    }
 
-.btn-secondary:hover {
-    background-color: #5a6268;
-    border-color: #545b62;
-}
+    /* Đảm bảo các nút có chiều rộng hợp lý và căn chỉnh */
+    .w-100 {
+        width: 100%;
+    }
 
-/* Tiêu đề */
-h1, h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 20px;
-}
+    /* Cải thiện kích thước và khoảng cách các phần tử trong bảng */
+    .table th, .table td {
+        text-align: center;
+        padding: 10px;
+    }
 
-/* Định dạng bảng */
-.table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-}
+    .table th {
+        font-size: 16px;
+        background-color: #343a40;
+        color: white;
+    }
 
-.table th, .table td {
-    text-align: left;
-    padding: 12px;
-    vertical-align: middle;
-}
+    .table td {
+        font-size: 14px;
+    }
 
-.table-bordered {
-    border: 1px solid #dee2e6;
-}
-
-.table-bordered th, .table-bordered td {
-    border: 1px solid #dee2e6;
-}
-
-.table-hover tbody tr:hover {
-    background-color: #f8f9fa;
-}
-
-.thead-dark th {
-    background-color: #343a40;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-/* Định dạng các hàng */
-tr[id^="row-"] {
-    transition: background-color 0.3s;
-}
-
-tr[id^="row-"]:hover {
-    background-color: #f1f1f1;
-}
-
-/* Định dạng trạng thái */
-b[id^="status-"] {
-    color: #28a745;
-    font-weight: bold;
-}
-
-/* Tổng giá */
-.col-md-4 h2 {
-    font-size: 20px;
-    margin-top: 0;
-}
-
+    /* Cải thiện khoảng cách giữa các phần tử */
+    .btn {
+        min-width: 150px;
+        margin-top: 10px;
+    }
 
 </style>
+<h1 class="text-center my-4">Quản lý gọi món</h1>
 
-<h1>Quản lý gọi món</h1>
-
-<p>
+<p class="text-center mb-4">
     <a asp-action="Create" class="btn btn-primary" style="background-color: #5f3812; border-color: #5f3812;">Khách gọi món</a>
 </p>
+
+<div class="row mb-4">
+    <!-- Form tìm kiếm và xuất Excel -->
+    <div class="col-md-8">
+        <form method="get" action="@Url.Action("Index", "Menus")" class="d-flex justify-content-between align-items-center">
+            <div class="form-group">
+                <select id="search" name="search" class="form-control">
+                    <option value="">-- Chọn Bàn --</option>
+                    @if (ViewBag.Tables is List<RestaurantManagement.Models.Table> tables)
+                    {
+                        foreach (var item in tables)
+                        {
+                            <option value="@item.TableNumber">@item.TableNumber</option>
+                        }
+                    }
+                </select>
+            </div>
+            <!-- Nút Tìm kiếm (Standard Bootstrap button) -->
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+        </form>
+
+    </div>
+
+    <div class="col-md-2">
+        @if (!string.IsNullOrEmpty(Context.Request.Query["search"]))
+        {
+            <a href="@Url.Action("ExportToExcel", "Menus", new { search = Context.Request.Query["search"] })" class="btn btn-info mt-2 w-100">
+                Xuất Excel bàn @Context.Request.Query["search"]
+            </a>
+        }
+    </div>
+    <div class="col-md-2">
+        <a href="@Url.Action("ExportToExcelAll", "Menus")" class="btn btn-info mt-2 w-100">
+            Xuất Excel Tất cả
+        </a>
+    </div>
+</div>
 
 <div class="row">
     <!-- Bảng danh sách món ăn -->
     <div class="col-md-8">
-        <h2 style="color: #5f3812;">Danh sách món các bàn gọi</h2>
-
-        <!-- Form tìm kiếm -->
-        <form method="get">
-            <div class="form-group">
-                <label for="tableNumber">Chọn Bàn</label>
-                <select id="search" name="search" class="form-control">
-                    <option value="">-- Chọn Bàn --</option>
-                    @foreach (var item in ViewBag.Tables as List<RestaurantManagement.Models.Table>)
-                    {
-                        <option value="@item.TableNumber">@item.TableNumber</option>
-                    }
-                </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
-        </form>
-        <table class="table table-bordered table-hover">
+        <h2 class="text-primary">Danh sách món các bàn gọi</h2>
+        <table class="table table-bordered table-hover mt-4">
             <thead class="thead-dark">
                 <tr>
                     <th>Tên Bàn</th>
@@ -148,7 +120,7 @@ b[id^="status-"] {
                 @foreach (var item in Model)
                 {
                     <tr id="row-@item.MenuId">
-                        <td style="font-size:20px">@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td style="font-size:18px">@Html.DisplayFor(modelItem => item.Name)</td>
                         <td>@Html.DisplayFor(modelItem => item.Price)</td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Description)
@@ -164,11 +136,10 @@ b[id^="status-"] {
         </table>
     </div>
 
-
     <!-- Bảng tổng giá -->
     <div class="col-md-4">
-        <h2 style="color: #5f3812;">Tổng số tiền theo bàn</h2>
-        <table class="table table-bordered table-hover">
+        <h2 class="text-primary">Tổng số tiền theo bàn</h2>
+        <table class="table table-bordered table-hover mt-4">
             <thead class="thead-dark">
                 <tr>
                     <th>Tên Bàn</th>
@@ -180,23 +151,17 @@ b[id^="status-"] {
                 @foreach (var group in ViewBag.GroupedData)
                 {
                     <tr>
-                        <td style="font-size:20px">@group.Name</td>
-                        <td style="font-size:20px">@group.TotalPrice</td>
+                        <td style="font-size:18px">@group.Name</td>
+                        <td style="font-size:18px">@group.TotalPrice</td>
                         <td>
-                                <button type="submit" class="btn btn-danger">Xoá</button>
+                            <button type="submit" class="btn btn-danger">Xoá</button>
                         </td>
                     </tr>
                 }
-
             </tbody>
         </table>
     </div>
 </div>
-<p>
-    <a href="@Url.Action("ExportToExcel", "Menus", new { search = ViewData["Search"] })" class="btn btn-success">
-        Xuất Excel
-    </a>
-</p>
 
 <script>
     function toggleStatus(menuId) {

@@ -1,11 +1,11 @@
-﻿@model List<Table>
+﻿@model List<RestaurantManagement.Models.Table>
 
-<h2>Danh sách bàn đã đặt</h2>
+<h2 class="text-center my-4">Danh sách bàn đã đặt</h2>
 
 @if (Model != null && Model.Any())
 {
-    <table class="table">
-        <thead>
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
             <tr>
                 <th>Mã bàn</th>
                 <th>Tên số</th>
@@ -19,6 +19,7 @@
                     <td>@table.TableId</td>
                     <td>@table.TableNumber</td>
                     <td>@table.UpdatedAt</td>
+                    <td>@table.Reservations</td>
                 </tr>
             }
         </tbody>
@@ -26,5 +27,39 @@
 }
 else
 {
-    <p>Hiện tại bạn chưa đặt bàn nào.</p>
+    <p class="text-center">Hiện tại bạn chưa đặt bàn nào.</p>
 }
+
+<style>
+    /* Add a little spacing around the table */
+    table {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Table Header Styles */
+    thead {
+        background-color: #343a40;
+        color: white;
+    }
+
+    /* Table Row Hover Effect */
+    tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    /* Table Cells and Text Centering */
+    td, th {
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* Add some padding and border-radius to the paragraphs */
+    p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #6c757d;
+    }
+
+    /* Responsive Table */
+</style>
